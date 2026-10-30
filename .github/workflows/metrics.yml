@@ -1,0 +1,37 @@
+# Renders github-metrics.svg (3D calendar, habits, languages) and commits it to the repo.
+# Needs a repo secret named METRICS_TOKEN (classic personal access token, scopes: public_repo, read:user).
+# If the scheduled run is ever disabled after a long quiet period, re-enable it from the Actions tab.
+name: Metrics
+
+on:
+  schedule:
+    - cron: "0 3 * * *"   # daily at 03:00 UTC
+  workflow_dispatch:       # run it manually from the Actions tab
+
+jobs:
+  github-metrics:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: lowlighter/metrics@v3.34
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          user: Amine-Fathallah0
+          template: classic
+          filename: github-metrics.svg
+          output_action: commit
+          committer_branch: main   # change to master if that is your default branch
+          config_timezone: Africa/Tunis
+          base: header, activity, community, repositories, metadata
+
+          # 3D contribution calendar (the isometric block chart)
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: half-year
+
+          # Coding habits
+          plugin_habits: yes
+
+          # Languages, recoloured to the photo palette: sky, amber, rail green, ivy brick, canal teal, stone
+          plugin_languages: yes
+          plugin_languages_ignored: jupyter notebook, html, css, dockerfile, makefile, shell
+          plugin_languages_limit: 6
+          plugin_languages_colors: "0:#5A9BD8, 1:#C97B45, 2:#3E8E6E, 3:#A8453A, 4:#3D738E, 5:#B7A58A"
