@@ -11,6 +11,8 @@ on:
 jobs:
   github-metrics:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write   # lets the built-in token commit github-metrics.svg
     steps:
       - uses: lowlighter/metrics@v3.34
         with:
