@@ -53,7 +53,7 @@ I build RAG agents, multi-agent systems and computer-vision pipelines, and I car
 ## Activity
 
 <p align="center">
-  <img src="github-metrics.svg" alt="GitHub activity: a 3D contribution calendar for the last six months, commit habits and most-used languages">
+  <img src="github-metrics.svg" alt="GitHub activity: a 3D contribution calendar for the last year, commit streaks and most-used languages">
 </p>
 
 <sub>The activity panel is generated daily with <a href="https://github.com/lowlighter/metrics">lowlighter/metrics</a>.</sub>
