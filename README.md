@@ -22,7 +22,8 @@ I build RAG agents, multi-agent systems and computer-vision pipelines, and I car
 
 ## What I've built
 
-- **RAG agent for a 70+ dataset BigQuery warehouse** — Sofrecom Tunisie (Orange Group), 2026. LangChain LCEL, Google Gemini and Qdrant Cloud, so non-technical teams can query data in plain language. Validated proof-of-concept-first: 0 hallucinations on 20 test questions.
+- **[RAG agent for a 70+ dataset BigQuery warehouse](https://github.com/Amine-Fathallah0/data-explorer-assistant)** — Sofrecom Tunisie (Orange Group), 2026. LangChain LCEL, Google Gemini and Qdrant Cloud, so non-technical teams can query data in plain language. Validated proof-of-concept-first: 0 hallucinations on 20 test questions.
+- **[RedsAhead](https://github.com/Amine-Fathallah0/RedsAhead)** — Liverpool FC analytics on free data (Understat, FBref); in progress, 2 of 4 phases done. A DuckDB pipeline feeds an attack/defence xG model validated walk-forward on held-out matches (RMSE 0.822 vs 0.911 for the league-average baseline), plus form, lineup and scouting analysis. A FastAPI backend and React dashboard come next. Unofficial, non-commercial fan project.
 - **[HireAI](https://github.com/Amine-Fathallah0/HireAI)** — multi-agent career platform built for the TSYP CS Challenge. Two CrewAI agents on Groq Llama-3.3-70B extract job data and score CV-to-job fit, served with FastAPI inside a 6-microservice stack.
 - **[Dentalyze](https://github.com/Amine-Fathallah0/pcdent)** — AI-assisted dental radiograph platform (defended May 2026, 17.6/20). 25,000-image benchmark curated with dentists, a YOLOv8m-seg pipeline, and Django REST + React with hot-swappable models.
 - **Wildfire detection platform** — Smart For Green (AgriTech), 2025. Django, YOLOv8, Redis-decoupled microservices and WebSocket alerts, shipped over 5 Scrum sprints.
